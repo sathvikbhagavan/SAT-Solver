@@ -6,54 +6,72 @@ ap.add_argument('-f', '--file', help='path of the csv file')
 
 args = vars(ap.parse_args())
 
-class Solver:
+F = pd.read_csv(args['file']).tolist()
+M = []
 
-    def __init__(self, file):
-        df = pd.read_csv(file)
-        self.F = self.df.tolist()
-        self.M = []
+def find_unit_clause(cnf):
+    ...
 
-    def check_sat(self):
-        for clause in self.F:
-            is_true = False
-            for literal in clause:
-                if literal > 0:
-                    if self.M[literal] == 1:
-                        is_true = True
-                        break
-                elif literal < 0:    
-                    if self.M[literal] == -1:
-                        is_true = True
-                        break
-            if not is_true:
-                return False
 
-        return True
+def solve(cnf, assignment):
 
-    def find_unit_literal(self):
+    unit_literals = []
+    while True:
+        x = find_unit_clause(cnf)
         
-        for i in range(len(self.F)):
-            count = 0
-            unassigned_l = None
-            for j in range(len(self.F[i])):
-                if (self.F[i][j] > 0 and self.M[abs(self.F[i][j])] < 0) \
-                    or (self.F[i][j] < 0 and self.M[abs(self.F[i][j])] > 0):
-                    count += 1
-                elif self.M[abs(self.F[i][j])] == 0:
-                    unassigned_l = j
-            if count == len(clause) - 1:
-                if self.F[i][j] < 0:
-                    self.M[abs(F[i][j])] = -1
-                else:
-                    self.M[abs(F[i][j])] = 1
-
-
-
-    def solve(self):
+        unit_literals.append(abs(x))
         
-        if self.check_sat():
-            return "SAT"
+        if x is None:
+            break
+        
+        if x < 0:
+            assignment[abs(x)] = -1
         else:
-            return "UNSAT"
+            assignment[abs(x)] = 1
 
-        self.find_unit_literal()
+        # Remove clauses containing x
+        contains = []
+        for i in range(len(cnf)):
+            for j in range(len(cnf[i])):
+                if x == cnf[i][j]:
+                    contains.append(i)
+
+        
+        for c in contains:
+            cnf.pop(c)
+        
+
+        # Remove !x from all clauses
+        for i in range(len(cnf)):
+            cnf[i].remove(-1*x)
+        
+
+    if check_null(cnf):
+        for u in unit_literals:
+            assignment[abs(u)] = 0
+        return False, assignment
+
+    if len(cnf) == 0:
+        return True, assignment
+
+    new_x = None
+    for i in range(1, len(assignment)):
+        if assignment[i] == 0:
+            new_x = i
+            break
+
+    if solve(copy.deepcopy(cnf)+[new_x], copy.deepcopy(assignment)):
+        return True, assignment
+
+    elif solve(copy.deepcopy(cnf)+[-new_x], copy.deepcopy(assignment)):
+        return True, assignment
+
+
+
+    
+
+    
+
+
+
+
