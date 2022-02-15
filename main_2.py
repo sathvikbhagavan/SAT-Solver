@@ -43,13 +43,34 @@ def find_unit_clauses(cnf):
             unit_clause.append(c[0])
     return unit_clause
 
-
-def unit_propogate_plus_pure_literal_elimination(cnf, assignment):
+def eliminate_pure_literals(cnf, assignment):   
     
     pure=find_pure_literals(cnf)
-    unit_clause=find_unit_clauses(cnf)
 
-    while unit_clause or pure:
+    while pure:
+        print('pure_literals',pure)
+        for x in pure:
+            if x < 0:
+                assignment[abs(x)] = -1
+            else:
+                assignment[abs(x)] = 1
+
+            contains = []
+            for i in range(len(cnf)):
+                if x in cnf[i]:
+                    contains.append(i)
+            
+            for c in sorted(contains, reverse=True):
+                del cnf[c] 
+
+            pure=find_pure_literals(cnf)
+    
+    return cnf, assignment
+
+def unit_propogate(cnf, assignment):
+    
+    unit_clause=find_unit_clauses(cnf)
+    while unit_clause:
         print('unit_clauses',unit_clause)
         for x in unit_clause:
             if x < 0:
@@ -72,31 +93,14 @@ def unit_propogate_plus_pure_literal_elimination(cnf, assignment):
                 if -1*x in cnf[i]:
                     cnf[i].remove(-1*x)
 
-        pure=find_pure_literals(cnf)
-        
-        print('pure_literals',pure)
-        for x in pure:
-            if x < 0:
-                assignment[abs(x)] = -1
-            else:
-                assignment[abs(x)] = 1
-
-            contains = []
-            for i in range(len(cnf)):
-                if x in cnf[i]:
-                    contains.append(i)
-            
-            for c in sorted(contains, reverse=True):
-                del cnf[c] 
-
-        pure=find_pure_literals(cnf)
         unit_clause=find_unit_clauses(cnf)
     
     return cnf,assignment
 
 def solve(cnf, assignment):
     
-    cnf, assignment = unit_propogate_plus_pure_literal_elimination(cnf,assignment) 
+    cnf, assignment = unit_propogate(cnf,assignment) 
+    cnf, assignment = eliminate_pure_literals(cnf,assignment)
       
     # Check if there is a null clause
     if sum([len(cnf[i]) == 0 for i in range(len(cnf))]):
