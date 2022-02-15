@@ -1,5 +1,8 @@
 import argparse
 import copy
+import numpy as np
+
+count = 0
 
 ap = argparse.ArgumentParser()
 ap.add_argument('-f', '--file', help='path of the csv file')
@@ -11,7 +14,45 @@ with open(args['file'], 'r') as f:
 
 F = []
 for line in lines:
-    F.append([int(i) for i in line.strip().split(' ')])
+    F.append([int(i) for i in line.strip().split(' ')[:-1]])
+
+
+def input_optimization(cnf):
+
+    d = []
+    for i in range(len(cnf)):
+        literals = list(set([abs(c) for c in cnf[i]]))
+        for l in literals:
+            if l in cnf[i] and -l in cnf[i]:
+                d.append(i)
+                break
+    
+    for j in sorted(d, reverse=True):
+            del cnf[j]
+
+    return cnf
+
+def preprocess(cnf, assignment):
+
+    literals = []
+    for i in range(len(cnf)):
+        if len(cnf[i]) == 1:
+            assignment[abs(cnf[i][0])] = np.sign(cnf[i][0])
+            literals.append(cnf[i][0])
+
+    for l in literals:
+        d = []
+        for i in range(len(cnf)):
+            if l in cnf[i]:
+                d.append(i)
+            if -l in cnf[i]:
+                cnf[i].remove(-l)
+
+        for j in sorted(d, reverse=True):
+            del cnf[j]
+
+    return cnf, assignment
+
 
 
 def find_unit_literals(cnf, assignment):
@@ -30,17 +71,15 @@ def find_unit_literals(cnf, assignment):
 
 
 def solve(cnf, assignment):
-    print(cnf)
+    global count
+    count += 1
+    print(count)
     unit_literals = []
     xs = find_unit_literals(cnf, assignment)
-    print(xs)
 
     for x in xs:
         unit_literals.append(abs(x))
-        if x < 0:
-            assignment[abs(x)] = -1
-        else:
-            assignment[abs(x)] = 1
+        assignment[abs(x)] = np.sign(x)
 
         # Remove clauses containing x
         contains = []
@@ -51,7 +90,6 @@ def solve(cnf, assignment):
         for c in sorted(contains, reverse=True):
             del cnf[c]
     
-        print(cnf)
         # Remove !x from all clauses
         for i in range(len(cnf)):
             if -1*x in cnf[i]:
@@ -59,13 +97,12 @@ def solve(cnf, assignment):
         
 
     # Check if there is a null clause
-    if sum([len(cnf[i]) == 0 for i in range(len(cnf))]):
+    if any([len(c) == 0 for c in cnf]):
         for u in unit_literals:
             assignment[abs(u)] = 0
-        return False, assignment
+        return False, None
 
     if len(cnf) == 0:
-        print(assignment)
         return True, assignment
 
     literal = None
@@ -75,7 +112,7 @@ def solve(cnf, assignment):
             break
     
     if literal is None:
-        return False, assignment
+        return False, None
 
     sat, new_assignment = solve(copy.deepcopy(cnf)+[[literal]], copy.deepcopy(assignment))
     if sat:
@@ -85,11 +122,7 @@ def solve(cnf, assignment):
     if sat:
         return True, new_assignment
 
-    else:
-        for u in unit_literals:
-            assignment[abs(u)] = 0
-        return False, assignment
-
+    return False, None
 
 
 def get_assignment(cnf):
@@ -100,10 +133,26 @@ def get_assignment(cnf):
     return assignment
     
 
+def check_assignment(cnf, assignment):
+    for c in cnf:
+        is_true = False
+        for l in c:
+            if l > 0 and assignment[abs(l)] == 1:
+                is_true = True
+                break
+            elif l < 0 and assignment[abs(l)] == -1:
+                is_true = True
+                break
+        if not is_true:
+            return False
+
+    return True
+
+
+F = input_optimization(F)
 assignment = get_assignment(F)
+F, assignment = preprocess(F, assignment)
 sat, assignment = solve(F, assignment)
 print(sat, assignment)
-
-
-
+print(check_assignment(F, assignment))
 
