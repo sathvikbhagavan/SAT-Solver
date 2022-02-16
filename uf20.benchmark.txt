@@ -1,0 +1,90 @@
+---------------------------------------------
+For file testcases/uf20-01.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.006927490234375 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-02.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.004422664642333984 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-03.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.003542184829711914 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-04.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0013477802276611328 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-05.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0019614696502685547 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-06.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0024793148040771484 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-07.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.002178192138671875 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-08.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0019259452819824219 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-09.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.003262042999267578 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-010.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0019729137420654297 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-011.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0055696964263916016 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-012.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.0029556751251220703 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-013.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.007138490676879883 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-014.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.005064249038696289 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uf20-015.cnf...
+It is satisfiable
+After checking assignment, it is correct
+it takes 0.004601955413818359 seconds
+---------------------------------------------
