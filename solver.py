@@ -105,6 +105,8 @@ class Solver:
 
     def choose_literal(self, cnf, assignment):
 
+        # MOMS Heuristic
+
         length = 2
         max_length = max([len(i) for i in cnf])
         for l in range(length, max_length+1):
@@ -123,6 +125,8 @@ class Solver:
                 return k[v.index(max(v))]
 
         
+        # Exponential weighted average heuristic
+
         # length = 2
         # l_map = dict()
         # max_length = max([len(i) for i in cnf])
