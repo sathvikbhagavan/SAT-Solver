@@ -1,6 +1,5 @@
 # CS202A_Assignment_2
 
-No 
 
 ## Run for a single test case
 
