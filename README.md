@@ -7,6 +7,7 @@ No
 There are two argument to provide
 
 -f or --file : test case file
+
 -m or --model : get model (0/1)
 
 Example: python3 driver.py -f testcases/uf20-01.cnf -m 1
