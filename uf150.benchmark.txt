@@ -2,89 +2,89 @@
 For file testcases/uf150-01.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 1.6529860496520996 seconds
+it takes 1.6425280570983887 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-02.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 8.34335994720459 seconds
+it takes 8.529969215393066 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-03.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 96.11468887329102 seconds
+it takes 91.9685652256012 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-04.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 5.9951488971710205 seconds
+it takes 6.291439533233643 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-05.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.4274611473083496 seconds
+it takes 0.44785070419311523 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-06.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 4.963746547698975 seconds
+it takes 5.164480924606323 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-07.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 7.609533309936523 seconds
+it takes 8.02682638168335 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-08.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.10766410827636719 seconds
+it takes 0.10756587982177734 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-09.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 22.102014303207397 seconds
+it takes 26.20874547958374 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-010.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 16.76129174232483 seconds
+it takes 18.38976263999939 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-011.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.2876765727996826 seconds
+it takes 0.3011660575866699 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-012.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 53.44943571090698 seconds
+it takes 56.534242391586304 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-013.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.15887069702148438 seconds
+it takes 0.15903353691101074 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-014.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 66.98877096176147 seconds
+it takes 71.02182483673096 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf150-015.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 7.0675740242004395 seconds
+it takes 8.833219051361084 seconds
 ---------------------------------------------

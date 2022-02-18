@@ -1,0 +1,103 @@
+---------------------------------------------
+For file testcases/uuf150-01.cnf...
+It is unsatisfiable
+it takes 31.93496537208557 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-02.cnf...
+It is unsatisfiable
+it takes 71.04294300079346 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-03.cnf...
+It is unsatisfiable
+it takes 58.886435985565186 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-04.cnf...
+It is unsatisfiable
+it takes 39.70053744316101 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-05.cnf...
+It is unsatisfiable
+it takes 42.63974404335022 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-06.cnf...
+It is unsatisfiable
+it takes 65.04419326782227 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-07.cnf...
+It is unsatisfiable
+it takes 84.44463181495667 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-08.cnf...
+It is unsatisfiable
+it takes 25.820613384246826 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-09.cnf...
+It is unsatisfiable
+it takes 41.86655139923096 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-010.cnf...
+It is unsatisfiable
+it takes 56.23816394805908 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-011.cnf...
+It is unsatisfiable
+it takes 57.154059171676636 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-012.cnf...
+It is unsatisfiable
+it takes 112.95832324028015 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-013.cnf...
+It is unsatisfiable
+it takes 42.881190061569214 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-014.cnf...
+It is unsatisfiable
+it takes 68.93406915664673 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-015.cnf...
+It is unsatisfiable
+it takes 57.02760601043701 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-016.cnf...
+It is unsatisfiable
+it takes 32.54414677619934 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-017.cnf...
+It is unsatisfiable
+it takes 56.46607422828674 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-018.cnf...
+It is unsatisfiable
+it takes 75.5713701248169 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-019.cnf...
+It is unsatisfiable
+it takes 34.47518229484558 seconds
+---------------------------------------------
+---------------------------------------------
+For file testcases/uuf150-020.cnf...
+It is unsatisfiable
+it takes 53.350860357284546 seconds
+---------------------------------------------
+Max time taken is: 112.95832324028015
+Min time taken is: 25.820613384246826
+Average time taken is: 55.4490830540657

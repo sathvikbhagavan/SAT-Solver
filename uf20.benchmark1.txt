@@ -2,89 +2,92 @@
 For file testcases/uf20-01.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.003497600555419922 seconds
+it takes 0.006566524505615234 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-02.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0020096302032470703 seconds
+it takes 0.0038652420043945312 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-03.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0019893646240234375 seconds
+it takes 0.00783395767211914 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-04.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0015621185302734375 seconds
+it takes 0.002629518508911133 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-05.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0020771026611328125 seconds
+it takes 0.002349376678466797 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-06.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0021250247955322266 seconds
+it takes 0.0018415451049804688 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-07.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0023026466369628906 seconds
+it takes 0.0019614696502685547 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-08.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0020279884338378906 seconds
+it takes 0.0016450881958007812 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-09.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0037124156951904297 seconds
+it takes 0.0034799575805664062 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-010.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0020639896392822266 seconds
+it takes 0.0029802322387695312 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-011.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.001865386962890625 seconds
+it takes 0.0012731552124023438 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-012.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.0021309852600097656 seconds
+it takes 0.0018246173858642578 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-013.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.004193544387817383 seconds
+it takes 0.004683017730712891 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-014.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.002208232879638672 seconds
+it takes 0.0018117427825927734 seconds
 ---------------------------------------------
 ---------------------------------------------
 For file testcases/uf20-015.cnf...
 It is satisfiable
 After checking assignment, it is correct
-it takes 0.010583162307739258 seconds
+it takes 0.0017659664154052734 seconds
 ---------------------------------------------
+Max time taken is: 0.00783395767211914
+Min time taken is: 0.0012731552124023438
+Average time taken is: 0.003100760777791341

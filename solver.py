@@ -105,39 +105,39 @@ class Solver:
 
     def choose_literal(self, cnf, assignment):
 
-        # length = 2
-        # max_length = max([len(i) for i in cnf])
-        # for l in range(length, max_length+1):
-        #     l_map = dict()
-        #     for c in cnf:
-        #         if len(c) == l:
-        #             for i in c:
-        #                 if assignment[abs(i)] == 0:
-        #                     if i not in l_map.keys():
-        #                         l_map[i] = 1
-        #                     else:
-        #                         l_map[i] += 1
-        #     if len(sorted(l_map.keys())) != 0:
-        #         v = list(l_map.values())
-        #         k = list(l_map.keys())
-        #         return k[v.index(max(v))]
+        length = 2
+        max_length = max([len(i) for i in cnf])
+        for l in range(length, max_length+1):
+            l_map = dict()
+            for c in cnf:
+                if len(c) == l:
+                    for i in c:
+                        if assignment[abs(i)] == 0:
+                            if i not in l_map.keys():
+                                l_map[i] = 1
+                            else:
+                                l_map[i] += 1
+            if len(sorted(l_map.keys())) != 0:
+                v = list(l_map.values())
+                k = list(l_map.keys())
+                return k[v.index(max(v))]
 
         
-        length = 2
-        l_map = dict()
-        max_length = max([len(i) for i in cnf])
-        for c in cnf:
-            for i in c:
-                if assignment[abs(i)] == 0:
-                    if i not in l_map.keys():
-                        l_map[i] = 1/(2**len(c))
-                    else:
-                        l_map[i] += 1/(2**len(c))
+        # length = 2
+        # l_map = dict()
+        # max_length = max([len(i) for i in cnf])
+        # for c in cnf:
+        #     for i in c:
+        #         if assignment[abs(i)] == 0:
+        #             if i not in l_map.keys():
+        #                 l_map[i] = 1/(2**len(c))
+        #             else:
+        #                 l_map[i] += 1/(2**len(c))
         
-        if len(l_map.keys()) != 0:
-            v = list(l_map.values())
-            k = list(l_map.keys())
-            return k[v.index(max(v))]
+        # if len(l_map.keys()) != 0:
+        #     v = list(l_map.values())
+        #     k = list(l_map.keys())
+        #     return k[v.index(max(v))]
 
 
     def solve(self, cnf, assignment):
