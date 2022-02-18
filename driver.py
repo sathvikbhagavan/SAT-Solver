@@ -19,4 +19,4 @@ end_time = time.time()
 print(f'Time Taken: {end_time-start_time}')
 
 if int(args['model']):
-    print(s.assignment)
+    s.print_model()
