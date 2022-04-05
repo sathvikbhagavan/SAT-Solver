@@ -1,4 +1,4 @@
-# CS202A_Assignment_2
+# CS202A_Assignment_2: SAT Solver using DPLL Algorithm with Heuristics
 
 
 ## Run for a single test case
